@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure Essence</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(to right, #333, #555);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .user-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .user-actions a {
+            background: white;
+            color: #333;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: 0.3s ease;
+        }
+
+        .user-actions a:hover {
+            background: #ddd;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: #444;
+            padding: 1rem;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+       /* Hero Section */
+    .hero {
+        background: linear-gradient(to right, #f3f3f3, #eaeaea);
+        text-align: center;
+        padding: 3rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content {
+        max-width: 600px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        color: #333;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero p {
+        color: #666;
+        font-size: 1.1rem;
+        margin: 0.8rem 0 1.5rem;
+    }
+
+    .hero img {
+        max-width: 100%;
+        border-radius: 10px;
+        box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1rem;
+    }
+
+    .cta-button {
+        background: #333;
+        color: white;
+        padding: 0.8rem 1.5rem;
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        transition: 0.3s ease;
+    }
+
+    .cta-button:hover {
+        background: #555;
+        transform: scale(1.05);
+    }
+
+          /* Product Grid */
+    .product-grid {
+        text-align: center;
+        padding: 2rem;
+        background: #f8f8f8;
+    }
+
+    .product-grid h2 {
+        font-size: 1.8rem;
+        color: #333;
+        margin-bottom: 1.5rem;
+    }
+
+    .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.5rem;
+        justify-content: center;
+    }
+
+    .product-card {
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .product-card img {
+        max-width: 100%;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+    }
+
+    .product-card h3 {
+        font-size: 1.2rem;
+        color: #444;
+        margin-bottom: 0.5rem;
+    }
+
+    .product-card .price {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #27ae60;
+        margin-bottom: 0.5rem;
+    }
+
+    .buy-button {
+        display: block;
+        background: #333;
+        color: white;
+        padding: 0.6rem;
+        text-decoration: none;
+        border-radius: 5px;
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 0.5rem;
+    }
+
+    .buy-button:hover {
+        background: #555;
+    }
+        /* FAQ Section */
+        .faq-section {
+            padding: 2rem;
+            background: #f9f9f9;
+        }
+
+        .faq-item {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: white;
+            border-radius: 4px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .social-icons {
+            margin: 1rem 0;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .social-icons a:hover {
+            color: #ddd;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                text-align: center;
+            }
+
+
+            /* banner */
+            
+        }
+
+        .banner {
+    position: relative;
+    width: 100%;
+    max-width: 1000px; /* Adjust as needed */
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height:25rem;
+    border-radius: 10px;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: red;
+    color: white;
+    padding: 8px 12px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">PURE ESSENCE</div>
+        <div class="user-actions">
+            <a href="#"><i class="fas fa-user"></i> Login</a>
+            <a href="#"><i class="fas fa-shopping-cart"></i> Cart</a>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="foundations.html"><i class="fas fa-makeup-brush"></i> Makeup</a></li>
+            <li><a href="#"><i class="fas fa-spa"></i> Skincare</a></li>
+            <li><a href="#"><i class="fas fa-air-freshener"></i> Haircare</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Unleash Your Natural Beauty</h1>
+            <p>Explore the purest skincare and makeup essentials made just for you.</p>
+            <img src="images\Screenshot 2025-02-23 103000.png" alt="Beauty Products">
+            <a href="explore_more.html" class="cta-button">Shop Now</a>
+        </div>
+    </section>
+<!-- New Launches Section -->
+<section class="product-grid">
+    <h2>New Launches</h2>
+    <div class="products">
+        <div class="product-card">
+            <img src="images/image copy.png" alt="Matte Lipstick">
+            <h3>Matte Lipstick</h3>
+            <p class="price">₹599</p>
+            <a href="#" class="buy-button">Buy Now</a>
+        </div>
+        <div class="product-card">
+            <img src="images/image copy.png" alt="Hydrating Face Cream">
+            <h3>Hydrating Face Cream</h3>
+            <p class="price">₹799</p>
+            <a href="#" class="buy-button">Buy Now</a>
+        </div>
+        <div class="product-card">
+            <img src="images/image copy.png" alt="Herbal Shampoo">
+            <h3>Herbal Shampoo</h3>
+            <p class="price">₹699</p>
+            <a href="#" class="buy-button">Buy Now</a>
+        </div>
+    </div>
+</section>
+
+<div class="banner">
+    <img src="images\Screenshot 2025-02-23 103412.png" alt="Product Banner">
+    <div class="discount-badge">10% OFF</div>
+</div>
+
+
+
+
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>FAQs</h2>
+        <div class="faq-item">
+            <h3>Are your products cruelty-free?</h3>
+            <p>Yes, all our products are cruelty-free and never tested on animals.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>Do your products contain any harmful chemicals?</h3>
+            <p>No, our products are made with natural and safe ingredients, free from parabens and sulfates.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>Is your packaging eco-friendly?</h3>
+            <p>Yes, we use recyclable and biodegradable packaging to reduce environmental impact.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>Do you offer international shipping?</h3>
+            <p>Yes, we ship worldwide! Delivery times may vary depending on your location.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>Can I return a product if I’m not satisfied?</h3>
+            <p>Absolutely! We have a 30-day return policy for unopened and unused products.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>Are your products suitable for sensitive skin?</h3>
+            <p>Yes, our products are dermatologically tested and formulated for all skin types, including sensitive skin.</p>
+        </div>
+        
+        <!-- Add more FAQ items -->
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p>&copy; 2023 Pure Essence. All rights reserved.</p>
+    </footer>
+
+    <!-- Simple JavaScript for mobile menu -->
+    <script>
+        document.querySelector('.mobile-menu-btn')?.addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

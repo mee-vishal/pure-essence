@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure Essence - Foundations</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+    
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #fff;
+        }
+    
+        /* Header */
+        .header {
+            background: linear-gradient(to right, #333, #555);
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+    
+        .user-actions {
+            display: flex;
+            gap: 1rem;
+        }
+    
+        .user-actions a {
+            background: white;
+            color: #333;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: 0.3s ease;
+        }
+    
+        .user-actions a:hover {
+            background: #ddd;
+        }
+    
+        /* Navigation */
+        .navbar {
+            background: #444;
+            padding: 1rem;
+        }
+    
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+    
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+    
+        .nav-links a.active {
+            color: #ffd700;
+            border-bottom: 2px solid #ffd700;
+        }
+    
+        /* Foundation Hero */
+        .hero {
+            background: linear-gradient(45deg, #fff5f5, #fff0f7);
+            text-align: center;
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+    
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+    
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+    
+        .hero img {
+            max-width: 600px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+    
+        /* Foundation Products */
+        .product-grid {
+            padding: 4rem 2rem;
+            background: #fafafa;
+        }
+    
+        .product-grid h2 {
+            font-size: 2rem;
+            color: #444;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+    
+        .product-grid h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: #444;
+            margin: 0.5rem auto;
+        }
+    
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            /* transition: transform 0.3s ease; */
+        }
+    
+        .product-card:hover {
+            /* transform: translateY(-5px); */
+        }
+    
+        .product-card img {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+    
+        .product-card h3 {
+            color: #222;
+            font-size: 1.3rem;
+            margin: 0.5rem 0;
+        }
+    
+        .product-card .price {
+            color: #e91e63;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+        }
+    
+        .buy-button {
+            background: linear-gradient(45deg, #ff6b6b, #ff8787);
+            color: white;
+            padding: 0.8rem;
+            border-radius: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+    
+        .buy-button:hover {
+            background: linear-gradient(45deg, #ff5252, #ff6b6b);
+            box-shadow: 0 5px 15px rgba(255,82,82,0.3);
+        }
+    
+        /* Features Section */
+        .features-section {
+            padding: 4rem 2rem;
+            background: #fff;
+            text-align: center;
+        }
+    
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+    
+        .feature-card {
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+    
+        .feature-card i {
+            font-size: 2.5rem;
+            color: #ff6b6b;
+            margin-bottom: 1rem;
+        }
+    
+        /* Shade Match Section */
+        .shade-match {
+            background: #fff9f9;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+    
+        .shade-guide {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+    
+        .shade-circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+    
+        .shade-circle:hover {
+            transform: scale(1.1);
+        }
+    
+        /* FAQ Section */
+        .faq-section {
+            padding: 4rem 2rem;
+            background: #f8f9fa;
+        }
+    
+        .faq-item {
+            background: white;
+            padding: 1.5rem;
+            margin: 1rem auto;
+            max-width: 800px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+    
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+    
+        .social-icons {
+            margin: 2rem 0;
+        }
+    
+        .social-icons a {
+            color: white;
+            margin: 0 1rem;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+    
+        .social-icons a:hover {
+            color: #ffd700;
+        }
+    
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .products {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">PURE ESSENCE</div>
+        <div class="user-actions">
+            <a href="#"><i class="fas fa-user"></i> Login</a>
+            <a href="#"><i class="fas fa-shopping-cart"></i> Cart</a>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="foundations.html" class="active"><i class="fas fa-makeup-brush"></i> Makeup</a></li>
+            <li><a href="#"><i class="fas fa-spa"></i> Skincare</a></li>
+            <li><a href="#"><i class="fas fa-air-freshener"></i> Haircare</a></li>
+        </ul>
+    </nav>
+
+    <!-- Foundation Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Flawless Foundation Collection</h1>
+            <p>Discover your perfect match with our breathable, long-wear formulas</p>
+            <img src="images\Screenshot 2025-03-02 192504.png" alt="Foundation Products">
+            <a href="foundation_product.html" class="cta-button">Find Your Shade</a>
+        </div>
+    </section>
+
+    <!-- Foundation Products -->
+    <section class="product-grid" id="products">
+        <h2>Our Foundation Range</h2>
+        <div class="products">
+            <div class="product-card">
+                <img src="images\Screenshot 2025-03-02 195352.png" alt="Matte Finish Foundation">
+                <h3>Matte Perfection</h3>
+                <p class="price">₹1299</p>
+                <p>Oil-free formula for a shine-free finish</p>
+                <a href="#" class="buy-button">Add to Cart</a>
+            </div>
+            <div class="product-card">
+                <img src="images\Screenshot 2025-03-02 195352.png" alt="Dewy Finish Foundation">
+                <h3>Radiant Glow</h3>
+                <p class="price">₹1399</p>
+                <p>Hydrating formula with luminous finish</p>
+                <a href="#" class="buy-button">Add to Cart</a>
+            </div>
+            <div class="product-card">
+                <img src="images\Screenshot 2025-03-02 195352.png" alt="Mineral Foundation">
+                <h3>Mineral Magic</h3>
+                <p class="price">₹1499</p>
+                <p>Natural mineral formula for sensitive skin</p>
+                <a href="#" class="buy-button">Add to Cart</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="faq-section">
+        <h2>Why Choose Our Foundations?</h2>
+        <div class="faq-item">
+            <h3>Lightweight Formula</h3>
+            <p>Our breathable formulas feel like second skin while providing buildable coverage</p>
+        </div>
+        <div class="faq-item">
+            <h3>40+ Shades</h3>
+            <p>Inclusive range for all skin tones with warm, cool, and neutral undertones</p>
+        </div>
+        <div class="faq-item">
+            <h3>Skincare Benefits</h3>
+            <p>Infused with hyaluronic acid and SPF 30 for daily protection</p>
+        </div>
+    </section>
+
+    <!-- Shade Match FAQ -->
+    <section class="faq-section">
+        <h2>Foundation FAQs</h2>
+        <div class="faq-item">
+            <h3>How to find my perfect shade?</h3>
+            <p>Use our virtual shade finder or consult with our beauty experts online</p>
+        </div>
+        <div class="faq-item">
+            <h3>Are these non-comedogenic?</h3>
+            <p>Yes, all our foundations are dermatologist-tested and non-comedogenic</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p>&copy; 2023 Pure Essence. All rights reserved.</p>
+    </footer>
+</body>
+</html>
